@@ -1,0 +1,637 @@
+:root {
+  --navy: #2C3E50;
+  --navy-deep: #223244;
+  --gold: #C8952E;
+  --paper: #FFFFFF;
+  --mist: #EDEBE7;
+  --mist-line: #E2DFDA;
+  --muted: #6E7580;
+  --ink: #2C3E50;
+  --text-dark: #333;
+
+  --font-display: 'Cormorant Garamond', serif;
+  --font-body: 'Open Sans', sans-serif;
+  --font-mono: 'IBM Plex Mono', monospace;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  font-family: var(--font-body);
+  color: var(--ink);
+  background: var(--paper);
+  -webkit-font-smoothing: antialiased;
+  line-height: 1.6;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.wrap {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 40px;
+}
+
+/* ---------- Header ---------- */
+.site-header {
+  position: relative;
+  z-index: 20;
+  background: var(--paper);
+  border-bottom: 1px solid transparent;
+}
+
+.site-header .wrap {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 82px;
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.brand-logo {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+}
+
+.brand-name {
+  font-family: var(--font-display);
+  font-weight: 800;
+  font-size: 1.5rem;
+  color: var(--navy);
+  white-space: nowrap;
+}
+
+.main-nav {
+  display: flex;
+  gap: 34px;
+}
+
+.main-nav a {
+  font-family: var(--font-body);
+  font-size: 0.86rem;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+  color: var(--navy);
+  font-weight: 600;
+  padding: 6px 0;
+  border-bottom: 2px solid transparent;
+  transition: border-color 0.2s ease, color 0.2s ease;
+}
+
+.main-nav a:hover,
+.main-nav a[aria-current="page"] {
+  border-color: var(--gold);
+}
+
+/* ---------- Hero (home only) ---------- */
+.hero {
+  position: relative;
+  height: 62vh;
+  min-height: 420px;
+  max-height: 640px;
+  overflow: hidden;
+}
+
+.hero-intro {
+  position: relative;
+  width: 100%;
+  height: 62vh;
+  min-height: 420px;
+  max-height: 640px;
+  background-image: url("assets/groupsimage.jpeg");
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+}
+
+.hero-box {
+  background: #fff;
+  padding: 40px 60px;
+  text-align: center;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  transform: translateY(50%);
+  width: 80%;
+  max-width: 600px;
+}
+
+.hero-box h1 {
+  font-family: var(--font-display);
+  font-weight: 600;
+  font-size: 2.6rem;
+  margin: 0 0 12px;
+  color: var(--navy);
+}
+
+.hero-box p {
+  font-size: 1.1rem;
+  color: var(--muted);
+  margin: 0 0 28px;
+}
+
+.btn-row {
+  display: flex;
+  gap: 16px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+/* ---------- Buttons ---------- */
+.btn {
+  display: inline-block;
+  font-family: var(--font-mono);
+  font-size: 14px;
+  text-transform: uppercase;
+  padding: 10px 20px;
+  background: var(--navy);
+  color: #fff;
+  border-radius: 3px;
+  border: 1px solid var(--navy-deep);
+  transition: background 0.2s ease, color 0.2s ease, border-color .2s ease;
+}
+
+.btn:hover {
+  background: var(--navy-deep);
+}
+
+.btn-ghost {
+  background: transparent;
+  color: var(--navy);
+}
+
+.btn-ghost:hover {
+  background: var(--navy);
+  color: #fff;
+}
+
+.link-arrow {
+  font-family: var(--font-display);
+  font-size: 14px;
+  font-weight: bold;
+  color: var(--text-dark);
+  text-transform: uppercase;
+}
+
+/* ---------- Section eyebrow / heading system ---------- */
+.eyebrow {
+  font-family: var(--font-mono);
+  font-size: 0.78rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--gold);
+  margin: 0 0 10px;
+}
+
+section.block {
+  padding: 76px 0;
+}
+
+section.block.tight {
+  padding: 56px 0;
+}
+
+section.block.on-mist {
+  background: var(--mist);
+}
+
+h2.section-title {
+  font-family: var(--font-display);
+  font-weight: 600;
+  font-size: 2rem;
+  color: var(--navy);
+  margin: 0 0 36px;
+}
+
+/* ---------- Page banner (subpages) ---------- */
+.page-banner {
+  background: var(--navy);
+  color: #fff;
+  text-align: center;
+  padding: 54px 40px 60px;
+}
+
+.page-banner .eyebrow {
+  color: #E3B95E;
+}
+
+.page-banner h1 {
+  font-family: var(--font-display);
+  font-weight: 500;
+  font-style: italic;
+  font-size: 2.5rem;
+  margin: 0;
+  color: #fff;
+}
+
+/* ---------- News cards ---------- */
+.news-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 32px;
+}
+
+.news-card {
+  display: flex;
+  flex-direction: column;
+}
+
+.card-photo {
+  aspect-ratio: 4/3;
+  position: relative;
+  overflow: hidden;
+  margin-bottom: 18px;
+}
+
+.news-card h3 {
+  font-family: var(--font-display);
+  font-weight: 600;
+  font-size: 1.25rem;
+  margin: 0 0 8px;
+  color: var(--navy);
+}
+
+.news-card p {
+  color: var(--muted);
+  font-size: 0.95rem;
+  margin: 0 0 16px;
+  flex-grow: 1;
+}
+
+/* ---------- Calendar / concert list ---------- */
+.concert-list {
+  border-top: 1px solid var(--mist-line);
+}
+
+.concert-row {
+  display: grid;
+  grid-template-columns: 130px 1fr 160px;
+  gap: 24px;
+  align-items: start;
+  padding: 26px 0;
+  border-bottom: 1px solid var(--mist-line);
+}
+
+.concert-date {
+  font-family: var(--font-mono);
+  font-size: 0.85rem;
+  color: var(--muted);
+  padding-top: 4px;
+}
+
+.concert-info h3 {
+  font-family: var(--font-display);
+  font-size: 1.2rem;
+  font-weight: 600;
+  margin: 0 0 6px;
+  color: var(--navy);
+}
+
+.concert-venue {
+  font-size: 0.92rem;
+  color: var(--muted);
+  margin: 0 0 8px;
+}
+
+.concert-desc {
+  font-size: 0.92rem;
+  color: var(--muted);
+  margin: 0;
+  max-width: 60ch;
+}
+
+.concert-action {
+  text-align: right;
+  padding-top: 6px;
+}
+
+/* ---------- Footer ---------- */
+.site-footer {
+  border-top: 1px solid var(--mist-line);
+  padding: 32px 0;
+}
+
+.site-footer .wrap {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 16px;
+}
+
+.footer-brand {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.footer-brand svg {
+  width: 30px;
+  height: 30px;
+}
+
+.footer-brand-text {
+  line-height: 1.35;
+}
+
+.footer-brand-text strong {
+  display: block;
+  font-family: var(--font-display);
+  font-size: 1rem;
+  color: var(--navy);
+}
+
+.footer-brand-text span {
+  font-size: 0.85rem;
+  color: var(--muted);
+}
+
+.footer-copy {
+  font-size: 0.85rem;
+  color: var(--muted);
+}
+
+.footer-links a {
+  font-size: 0.85rem;
+  color: var(--muted);
+  text-decoration: underline;
+}
+
+.footer-links a:hover {
+  color: var(--gold);
+}
+
+/* ---------- Simple page (contact, ons koor) ---------- */
+.two-col {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 60px;
+  align-items: start;
+}
+
+.info-block {
+  margin-bottom: 28px;
+}
+
+.info-block h3 {
+  font-family: var(--font-body);
+  font-weight: 600;
+  font-size: 0.95rem;
+  color: var(--navy);
+  margin: 0 0 6px;
+}
+
+.info-block a,
+.info-block p {
+  margin: 0;
+  color: var(--muted);
+}
+
+.info-block a {
+  text-decoration: underline;
+}
+
+.info-block a:hover {
+  color: var(--gold);
+}
+
+.about-eyebrow {
+  font-family: var(--font-body);
+  font-style: italic;
+  color: var(--muted);
+  font-size: 1rem;
+  margin: 0 0 6px;
+}
+
+.about-title {
+  font-family: var(--font-display);
+  font-size: 2.1rem;
+  font-weight: 600;
+  color: var(--navy);
+  margin: 0 0 18px;
+}
+
+.about-tagline {
+  font-size: 1.15rem;
+  color: var(--muted);
+  margin: 0 0 26px;
+}
+
+.about-body p {
+  margin: 0 0 20px;
+  max-width: 74ch;
+}
+
+.about-photo-small {
+  margin-top: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 8px;
+}
+.about-photo-big {
+  margin-top: 40px;
+}
+.about-photo-big .card-photo {
+  aspect-ratio: 21/9;
+}
+
+/* ---------- Detail Page ---------- */
+.page-detail-banner {
+  background: var(--navy);
+  color: var(--paper);
+  padding: 30px 0 30px;
+}
+
+.back-link {
+  font-family: var(--font-mono);
+  font-size: 0.85rem;
+  color: var(--mist);
+  text-decoration: none;
+  display: inline-block;
+  margin-bottom: 24px;
+  transition: color 0.2s ease;
+}
+
+.back-link:hover {
+  color: var(--gold);
+}
+
+.page-detail-banner .eyebrow {
+  color: #E3B95E;
+  margin-bottom: 8px;
+  display: block;
+}
+
+.page-detail-banner h1 {
+  font-family: var(--font-display);
+  font-weight: 500;
+  font-size: 3.5rem;
+  color: var(--paper);
+  margin: 0px;
+}
+
+.banner-meta {
+  display: flex;
+  gap: 60px;
+  margin-top: 0px;
+  font-size: 0.95rem;
+}
+
+.banner-meta strong {
+  font-family: var(--font-body);
+  font-size: 1rem;
+  font-weight: 600;
+  display: inline-block;
+  margin-bottom: 4px;
+}
+
+.detail-hero-img {
+  width: 100%;
+  height: auto;
+  margin-top: 40px;
+  margin-bottom: 40px;
+  border-radius: 8px; 
+}
+
+.detail-grid {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 60px;
+  align-items: start;
+  margin-bottom: 300px;
+}
+
+.single-col {
+  max-width: 800px;
+}
+
+.detail-content {
+    margin-bottom: 300px;
+}
+.detail-content h2 {
+  font-family: var(--font-display);
+  font-weight: 600;
+  font-size: 2rem;
+  color: var(--navy);
+  margin: 0 0 20px;
+}
+
+.practical-box {
+  background: var(--mist);
+  padding: 30px;
+  border-radius: 4px;
+}
+
+.practical-box h3 {
+  font-family: var(--font-display);
+  font-size: 1.5rem;
+  color: var(--navy);
+  margin: 0 0 20px;
+}
+
+.practical-item {
+  margin-bottom: 16px;
+  font-size: 0.95rem;
+}
+
+.practical-item:last-child {
+  margin-bottom: 0;
+}
+
+.practical-item strong {
+  display: block;
+  color: var(--navy);
+  font-family: var(--font-body);
+  font-weight: 600;
+  margin-bottom: 2px;
+}
+
+/* ---------- Responsive ---------- */
+@media (max-width: 900px) {
+  .wrap {
+    padding: 0 24px;
+  }
+
+  .site-header .wrap {
+    flex-direction: column;
+    align-items: flex-start;
+    height: auto;
+    padding-top: 18px;
+    padding-bottom: 14px;
+    gap: 14px;
+  }
+
+  .main-nav {
+    gap: 20px;
+    flex-wrap: wrap;
+  }
+
+  .news-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .media-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .two-col {
+    grid-template-columns: 1fr;
+    gap: 36px;
+  }
+
+  .concert-row {
+    grid-template-columns: 1fr;
+    gap: 8px;
+  }
+
+  .concert-action {
+    text-align: left;
+  }
+
+  .hero-intro h1 {
+    font-size: 2rem;
+  }
+
+  .site-footer .wrap {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  * {
+    transition: none !important;
+  }
+}
+
+a:focus-visible,
+button:focus-visible {
+  outline: 2px solid var(--gold);
+  outline-offset: 2px;
+}
