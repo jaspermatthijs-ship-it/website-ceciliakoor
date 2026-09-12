@@ -151,6 +151,10 @@ a {
   margin: 0 0 28px;
 }
 
+.hero-offset {
+  margin-top: 90px;
+}
+
 .btn-row {
   display: flex;
   gap: 16px;
@@ -467,6 +471,7 @@ h2.section-title {
 .about-photo-big {
   margin-top: 40px;
 }
+
 .about-photo-big .card-photo {
   aspect-ratio: 21/9;
 }
@@ -527,7 +532,7 @@ h2.section-title {
   object-fit: cover;
   margin-top: 24px;
   margin-bottom: 24px;
-  border-radius: 8px; 
+  border-radius: 8px;
 }
 
 .detail-grid {
@@ -543,10 +548,10 @@ h2.section-title {
 }
 
 .detail-content {
-    margin-bottom: 300px;
+  margin-bottom: 300px;
 }
 
-.detail-content a{
+.detail-content a {
   color: #172b3f;
   text-decoration: underline;
 }
@@ -609,12 +614,35 @@ h2.section-title {
     flex-wrap: wrap;
   }
 
+  .hero,
+
+  .hero-intro {
+    height: 25vh;
+    min-height: 300px;
+    max-height: 460px;
+  }
+  
+  .hero-offset {
+    margin-top: 150px;
+  }
+
   .news-grid {
     grid-template-columns: 1fr;
   }
 
   .media-grid {
     grid-template-columns: 1fr;
+  }
+
+  .detail-grid {
+    grid-template-columns: 1fr;
+    margin-bottom: 100px;
+  }
+
+  .detail-content {
+    padding-bottom: 100px;
+    margin-bottom: 0px;
+    padding-bottom: 0px
   }
 
   .two-col {
