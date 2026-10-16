@@ -396,9 +396,9 @@ h2.section-title {
 /* ---------- Simple page (contact, ons koor) ---------- */
 .two-col {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 5fr 3fr;
   gap: 60px;
-  align-items: start;
+  align-items: center;
 }
 
 .info-block {
